@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <titleindex.htmlDigital Message</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+          footer {
+              display: none;
+          }
+         .service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        section {
+            display: none;
+            padding: 80px 20px;
+            min-height: 400px;
+            text-align: center;
+        }
+
+        section:target {
+            display: block;
+        }
+        body:has(#home:target) footer {
+             display: block;
+        }
+        body:has(#about:target) footer {
+              display: block;
+        }
+        body:has(#services:target) footer {
+               display: block;
+        }
+
+       body:has(#contact:target) footer {
+               display: block;
+       }
+       footer {
+             display: none;
+             background: #222;
+             color:  green;
+             text-align: center;
+             padding: 20px;
+       }
+        footer p {
+             font-size: 14px;
+             padding: 25px 20px;
+             color: green;
+        }
+        #home {
+            background: #eaf6ff;
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        #home h1 {
+             font-size: 45px;
+         }
+        #home h1 {
+             text-align: center;
+        }
+        #home h1 {
+            margin-bottom: 25px;
+        }
+        #home p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+        button {
+              border-radius: 8px;
+              transition: 0.2s;
+        }
+        button:hover {
+              transform: scale(1.05);
+        }
+
+        #about {
+            background: #eeeeee;
+        }
+
+        #services {
+            background: white;
+        }
+
+        #contact {
+            background: #eeeeee;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            display: block;
+            font-size: 20px;
+            color: black;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        button {
+             border: none;
+             border-radius: 8px;
+             padding: 12px 25px;
+             font-size: 16px;
+             cursor: pointer;
+        }
+        #home button {
+             margin: 8px;
+        }
+        #about h2 {
+              font-size: 35px;
+        }
+        #about p {
+              max-width: 600px;
+              margin: 0 auto 25px;
+        }
+        #services h2 {
+              font-size: 35px;
+        }
+        #services p {
+              max-width: 600px;
+              margin: 0 auto 25px;
+        }
+       #contact h2 {
+              font-size: 35px;
+       }
+       #contact p {
+              max-width: 600px;
+              margin: 0 auto 25px;
+       }
+      .logo {
+               font-size: 28px;
+               font-weight: bold;
+      
+      }
+      @media (max-width: 600px) {
+        #home button {
+             width: 80%;
+             max-width: 250px;
+        }
+        #about button,
+        #services button,
+        #contact button {
+               width: 80%;
+               max-width: 250px;
+}
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+      }
+      form {
+    max-width: 500px;
+    margin: 30px auto 0;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form button {
+    background: #222;
+    color: white;
+}
+
+form button:hover {
+    background: #00bcd4;
+}
+.about-card {
+    background: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 17px;
+    margin: 0;
+}
+#home button {
+    background: #222;
+    color: white;
+    font-weight: bold;
+}
+
+#home button:hover {
+    background: #00bcd4;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+    Digital Message
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME -->
+
+    <section id="home">
+
+        <h1>Build Your Digital Future</h1>
+
+        <p>Simple ideas. Creative solutions. Better websites.</p>
+        <p>Welcome to my website. Explore my services and learn more about me.</p>
+
+        <a href="#services">
+            <button>Get Started</button>
+        </a>
+
+        <a href="#about">
+            <button>About Me</button>
+        </a>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>I am learning web development and building my own website.</p>
+         <div class="about-card">
+
+    <h3>My Journey</h3>
+
+    <p>
+        I am learning HTML and CSS step by step
+        and building my own website.
+    </p>
+
+         </div>
+
+        <a href="#home">
+            <button>Back to Home</button>
+        </a>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <h2>My Services</h2>
+
+        <p>We create simple and useful digital solutions.</p>
+         <div class="service-container">
+
+    <div class="service-card">
+        <h3>Web Design</h3>
+        <p>We create simple and modern websites.</p>
+        <a href="#contact">
+    <button>Learn More</button>
+        </a>
+    </div>
+
+    <div class="service-card">
+        <h3>Web Development</h3>
+        <p>We build useful and responsive websites.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Digital Solutions</h3>
+        <p>We provide simple digital solutions.</p>
+    </div>
+
+         </div>
+
+        <a href="#home">
+            <button>Back to Home</button>
+        </a>
+
+        <a href="#contact">
+            <button>Contact Us</button>
+        </a>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Have a question? Feel free to get in touch with us.</p>
+        <form>
+
+    <input type="text" placeholder="Your Name">
+
+    <input type="email" placeholder="Your Email">
+
+    <textarea placeholder="Your Message"></textarea>
+
+    <button type="submit">Send Message</button>
+
+        </form>
+
+        <a href="#home">
+            <button>Back to Home</button>
+        </a>
+
+    </section>
+  <footer>
+    <p>© 2026 My Website. All Rights Reserved.</p>
+  </footer>
+
+</body>
+  </html>
