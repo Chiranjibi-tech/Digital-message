@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <titleindex.htmlDigital Message</title>
+    <title>Digital Message</title>
 
     <style>
         * {
@@ -273,6 +273,35 @@ form button:hover {
 #home button:hover {
     background: #00bcd4;
 }
+      #contact form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact form textarea {
+    resize: vertical;
+}
+
+#contact form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
     </style>
 </head>
 
@@ -379,33 +408,61 @@ form button:hover {
     </section>
 
 
-    <!-- CONTACT -->
 
-    <section id="contact">
+  <!-- CONTACT -->
 
-        <h2>Contact Us</h2>
+<section id="contact">
 
-        <p>Have a question? Feel free to get in touch with us.</p>
-        <form>
+    <h2>Contact Us</h2>
 
-    <input type="text" placeholder="Your Name">
+    <p>Have a question? Feel free to get in touch with us.</p>
 
-    <input type="email" placeholder="Your Email">
+    <form action="https://formspree.io/f/xeaqozow" method="POST">
 
-    <textarea placeholder="Your Message"></textarea>
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
 
-    <button type="submit">Send Message</button>
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
 
-        </form>
+        <label>Subject</label>
 
-        <a href="#home">
-            <button>Back to Home</button>
-        </a>
+        <input
+            type="text"
+            name="subject"
+            placeholder="Enter subject"
+            required
+        >
 
-    </section>
+        <label>Application / Message</label>
+
+        <textarea
+            name="message"
+            rows="6"
+            placeholder="Write your application or message..."
+            required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <a href="#home">
+        <button>Back to Home</button>
+    </a>
+
+</section>
   <footer>
     <p>© 2026 My Website. All Rights Reserved.</p>
   </footer>
 
 </body>
-  </html>
+</html>
